@@ -179,7 +179,9 @@ Public charging availability is widely identified as a key factor in EV adoption
 
 ## Author and license
 
-**Mazen Shalaly** — Data Sceintist | AI Engineer
-Contact: *[mazenshalaly0@gmain.com]* · LinkedIn: *[[your profile URL](https://www.linkedin.com/in/mazen-shalaly-1a2366310/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BCv9LFchGTgyHBBDg%2FUrbDg%3D%3D)]*
+**Mazen Shalaly** — Data Sceintist | AI Engineer  
+Contacts :   
+Email: mazenshalaly0@gmail.com   
+LinkedIn: [Mazen Shalaly](https://www.linkedin.com/in/mazen-shalaly-1a2366310/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B4dyMLKSARPOLdJOEvjpEcg%3D%3D)
 
-Released under the MIT License (add a `LICENSE` file with your name and year).
+
