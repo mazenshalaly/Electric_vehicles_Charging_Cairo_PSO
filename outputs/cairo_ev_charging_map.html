@@ -1,0 +1,3206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_59f77cfde77acbec99c1b529a10a3443 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+</head>
+<body>
+    
+    <h3 align='center' style='font-size:16px'><b>Optimized EV charging stations - Greater Cairo (synthetic data)</b></h3><h4 align='center' style='font-size:12px'>Max distance to nearest station: 10.4 km | mean 5.1 km</h4>
+    
+            <div class="folium-map" id="map_59f77cfde77acbec99c1b529a10a3443" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_59f77cfde77acbec99c1b529a10a3443 = L.map(
+                "map_59f77cfde77acbec99c1b529a10a3443",
+                {
+                    center: [30.04444, 31.23583],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_537b6db4694c88de07df054e396b7c75 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_537b6db4694c88de07df054e396b7c75.addTo(map_59f77cfde77acbec99c1b529a10a3443);
+        
+    
+            var feature_group_262a50036a3621e312603de674f70fb4 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_febde0b76e9853f10c5e88ebd43fad29 = L.circleMarker(
+                [30.0475, 31.2358],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_262a50036a3621e312603de674f70fb4);
+        
+    
+        var popup_31d0b56264471c2b974f7858921ccc48 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f525c69b7c5393f7c0b7732b3141eee8 = $(`<div id="html_f525c69b7c5393f7c0b7732b3141eee8" style="width: 100.0%; height: 100.0%;"><b>Downtown</b><br>District center</div>`)[0];
+                popup_31d0b56264471c2b974f7858921ccc48.setContent(html_f525c69b7c5393f7c0b7732b3141eee8);
+            
+        
+
+        circle_marker_febde0b76e9853f10c5e88ebd43fad29.bindPopup(popup_31d0b56264471c2b974f7858921ccc48)
+        ;
+
+        
+    
+    
+            var circle_marker_6077ce97224fcee0774ab8c1286b11e3 = L.circleMarker(
+                [30.04, 31.228],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_262a50036a3621e312603de674f70fb4);
+        
+    
+        var popup_2770eb15d299a9c695002213aaad39c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_11af53510dfebf3942fd5799548cc78f = $(`<div id="html_11af53510dfebf3942fd5799548cc78f" style="width: 100.0%; height: 100.0%;"><b>Garden City</b><br>District center</div>`)[0];
+                popup_2770eb15d299a9c695002213aaad39c3.setContent(html_11af53510dfebf3942fd5799548cc78f);
+            
+        
+
+        circle_marker_6077ce97224fcee0774ab8c1286b11e3.bindPopup(popup_2770eb15d299a9c695002213aaad39c3)
+        ;
+
+        
+    
+    
+            var circle_marker_1aca62ebbe37f81e475b84820c5836fc = L.circleMarker(
+                [30.0667, 31.2167],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_262a50036a3621e312603de674f70fb4);
+        
+    
+        var popup_d9ae7707039941f7445586cbfea2d0e1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c247627193ed34207f5da76710cd9ae = $(`<div id="html_8c247627193ed34207f5da76710cd9ae" style="width: 100.0%; height: 100.0%;"><b>Zamalek</b><br>District center</div>`)[0];
+                popup_d9ae7707039941f7445586cbfea2d0e1.setContent(html_8c247627193ed34207f5da76710cd9ae);
+            
+        
+
+        circle_marker_1aca62ebbe37f81e475b84820c5836fc.bindPopup(popup_d9ae7707039941f7445586cbfea2d0e1)
+        ;
+
+        
+    
+    
+            var circle_marker_6a67be2852d2fef509f3e5ca32541b3c = L.circleMarker(
+                [29.9667, 31.25],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_262a50036a3621e312603de674f70fb4);
+        
+    
+        var popup_cf5f3176132a36d1993618d3f1dd7a04 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26f9348a862436015f7911e6fc82dc80 = $(`<div id="html_26f9348a862436015f7911e6fc82dc80" style="width: 100.0%; height: 100.0%;"><b>Maadi</b><br>District center</div>`)[0];
+                popup_cf5f3176132a36d1993618d3f1dd7a04.setContent(html_26f9348a862436015f7911e6fc82dc80);
+            
+        
+
+        circle_marker_6a67be2852d2fef509f3e5ca32541b3c.bindPopup(popup_cf5f3176132a36d1993618d3f1dd7a04)
+        ;
+
+        
+    
+    
+            var circle_marker_48da8fc89e232bac3dfe43ca77ce6495 = L.circleMarker(
+                [30.1, 31.3333],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_262a50036a3621e312603de674f70fb4);
+        
+    
+        var popup_98e54c6010b45c2c977380202ef41964 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_23cb7d28d4f55667a2ed4910868fe75e = $(`<div id="html_23cb7d28d4f55667a2ed4910868fe75e" style="width: 100.0%; height: 100.0%;"><b>Heliopolis</b><br>District center</div>`)[0];
+                popup_98e54c6010b45c2c977380202ef41964.setContent(html_23cb7d28d4f55667a2ed4910868fe75e);
+            
+        
+
+        circle_marker_48da8fc89e232bac3dfe43ca77ce6495.bindPopup(popup_98e54c6010b45c2c977380202ef41964)
+        ;
+
+        
+    
+    
+            var circle_marker_d45aade916b8d854c3c02ca415990df4 = L.circleMarker(
+                [30.0667, 31.3],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_262a50036a3621e312603de674f70fb4);
+        
+    
+        var popup_d17ed4f7a69f0d965ee550a815ac14b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4a86b795d1da610e43ef86260b9278c = $(`<div id="html_f4a86b795d1da610e43ef86260b9278c" style="width: 100.0%; height: 100.0%;"><b>Nasr City</b><br>District center</div>`)[0];
+                popup_d17ed4f7a69f0d965ee550a815ac14b5.setContent(html_f4a86b795d1da610e43ef86260b9278c);
+            
+        
+
+        circle_marker_d45aade916b8d854c3c02ca415990df4.bindPopup(popup_d17ed4f7a69f0d965ee550a815ac14b5)
+        ;
+
+        
+    
+    
+            var circle_marker_55ea904742af0f320f77b1d52984ffc0 = L.circleMarker(
+                [30.0375, 31.21],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_262a50036a3621e312603de674f70fb4);
+        
+    
+        var popup_d5871594031a336d9e44f6a4f902fba9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2ffbeaebe287cebcf6f6e0c1a64765af = $(`<div id="html_2ffbeaebe287cebcf6f6e0c1a64765af" style="width: 100.0%; height: 100.0%;"><b>Dokki</b><br>District center</div>`)[0];
+                popup_d5871594031a336d9e44f6a4f902fba9.setContent(html_2ffbeaebe287cebcf6f6e0c1a64765af);
+            
+        
+
+        circle_marker_55ea904742af0f320f77b1d52984ffc0.bindPopup(popup_d5871594031a336d9e44f6a4f902fba9)
+        ;
+
+        
+    
+    
+            var circle_marker_f212589d4d3e45aec570e51cf7c9d314 = L.circleMarker(
+                [30.045, 31.2],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_262a50036a3621e312603de674f70fb4);
+        
+    
+        var popup_845c50ba5126461bb198ff71132408e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d4a5768c7a7daf72ef8447effc368188 = $(`<div id="html_d4a5768c7a7daf72ef8447effc368188" style="width: 100.0%; height: 100.0%;"><b>Mohandessin</b><br>District center</div>`)[0];
+                popup_845c50ba5126461bb198ff71132408e6.setContent(html_d4a5768c7a7daf72ef8447effc368188);
+            
+        
+
+        circle_marker_f212589d4d3e45aec570e51cf7c9d314.bindPopup(popup_845c50ba5126461bb198ff71132408e6)
+        ;
+
+        
+    
+    
+            var circle_marker_2223fa4485c451ccb72d7657af630703 = L.circleMarker(
+                [30.0667, 31.2667],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_262a50036a3621e312603de674f70fb4);
+        
+    
+        var popup_1b0f1b065b4b5091e9bbf32ed41a6abc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_204f8f66f71c35f138dd7cf969580536 = $(`<div id="html_204f8f66f71c35f138dd7cf969580536" style="width: 100.0%; height: 100.0%;"><b>Abbassia</b><br>District center</div>`)[0];
+                popup_1b0f1b065b4b5091e9bbf32ed41a6abc.setContent(html_204f8f66f71c35f138dd7cf969580536);
+            
+        
+
+        circle_marker_2223fa4485c451ccb72d7657af630703.bindPopup(popup_1b0f1b065b4b5091e9bbf32ed41a6abc)
+        ;
+
+        
+    
+    
+            var circle_marker_f4f50d94ccd1ee0c4763dac7a92ffe91 = L.circleMarker(
+                [30.0833, 31.2333],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_262a50036a3621e312603de674f70fb4);
+        
+    
+        var popup_819842345670b7e9ef0d26ce5967a8ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5ea438548c2d52a1fcdab305aa53d945 = $(`<div id="html_5ea438548c2d52a1fcdab305aa53d945" style="width: 100.0%; height: 100.0%;"><b>Shubra</b><br>District center</div>`)[0];
+                popup_819842345670b7e9ef0d26ce5967a8ec.setContent(html_5ea438548c2d52a1fcdab305aa53d945);
+            
+        
+
+        circle_marker_f4f50d94ccd1ee0c4763dac7a92ffe91.bindPopup(popup_819842345670b7e9ef0d26ce5967a8ec)
+        ;
+
+        
+    
+    
+            var circle_marker_5d633f5807ac1557ea09f832b5d46cf6 = L.circleMarker(
+                [30.0167, 31.2333],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_262a50036a3621e312603de674f70fb4);
+        
+    
+        var popup_b47c1893aa7209071050b71576d1b135 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_76e73fa8c0c60a974fa3d465dcfa5391 = $(`<div id="html_76e73fa8c0c60a974fa3d465dcfa5391" style="width: 100.0%; height: 100.0%;"><b>Old Cairo</b><br>District center</div>`)[0];
+                popup_b47c1893aa7209071050b71576d1b135.setContent(html_76e73fa8c0c60a974fa3d465dcfa5391);
+            
+        
+
+        circle_marker_5d633f5807ac1557ea09f832b5d46cf6.bindPopup(popup_b47c1893aa7209071050b71576d1b135)
+        ;
+
+        
+    
+    
+            var circle_marker_0aedc4ca9e76667d02f88399e4877485 = L.circleMarker(
+                [30.05, 31.2667],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_262a50036a3621e312603de674f70fb4);
+        
+    
+        var popup_6ef9878b9680c89059d8761045aba85c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5d335b9c1872db26cbc28671e9f70934 = $(`<div id="html_5d335b9c1872db26cbc28671e9f70934" style="width: 100.0%; height: 100.0%;"><b>Khan el-Khalili</b><br>District center</div>`)[0];
+                popup_6ef9878b9680c89059d8761045aba85c.setContent(html_5d335b9c1872db26cbc28671e9f70934);
+            
+        
+
+        circle_marker_0aedc4ca9e76667d02f88399e4877485.bindPopup(popup_6ef9878b9680c89059d8761045aba85c)
+        ;
+
+        
+    
+    
+            var circle_marker_ff951fde2e94f3f07a6a2b82cfecf453 = L.circleMarker(
+                [30.0333, 31.2833],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_262a50036a3621e312603de674f70fb4);
+        
+    
+        var popup_5d3d358c5cfffcdcc4dd07be85891cfe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bbca78114604e267ff45af2cb3862c9e = $(`<div id="html_bbca78114604e267ff45af2cb3862c9e" style="width: 100.0%; height: 100.0%;"><b>City of the Dead</b><br>District center</div>`)[0];
+                popup_5d3d358c5cfffcdcc4dd07be85891cfe.setContent(html_bbca78114604e267ff45af2cb3862c9e);
+            
+        
+
+        circle_marker_ff951fde2e94f3f07a6a2b82cfecf453.bindPopup(popup_5d3d358c5cfffcdcc4dd07be85891cfe)
+        ;
+
+        
+    
+    
+            var circle_marker_9ad6569abb5e6a4f9b14c65d65c559ce = L.circleMarker(
+                [30.0167, 31.45],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_262a50036a3621e312603de674f70fb4);
+        
+    
+        var popup_f74e71f2534aef66bd32712990b7d96a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_83b120230a8aa2d2fee71ead84a6103e = $(`<div id="html_83b120230a8aa2d2fee71ead84a6103e" style="width: 100.0%; height: 100.0%;"><b>New Cairo</b><br>District center</div>`)[0];
+                popup_f74e71f2534aef66bd32712990b7d96a.setContent(html_83b120230a8aa2d2fee71ead84a6103e);
+            
+        
+
+        circle_marker_9ad6569abb5e6a4f9b14c65d65c559ce.bindPopup(popup_f74e71f2534aef66bd32712990b7d96a)
+        ;
+
+        
+    
+    
+            var circle_marker_7b16891af5b47373c028d1b1a69ac68e = L.circleMarker(
+                [29.95, 30.95],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_262a50036a3621e312603de674f70fb4);
+        
+    
+        var popup_ea0c00e360dceea542cc7274e6bf9aeb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_caa9e2a48ec0f88ce83369620743bd0e = $(`<div id="html_caa9e2a48ec0f88ce83369620743bd0e" style="width: 100.0%; height: 100.0%;"><b>6th October City</b><br>District center</div>`)[0];
+                popup_ea0c00e360dceea542cc7274e6bf9aeb.setContent(html_caa9e2a48ec0f88ce83369620743bd0e);
+            
+        
+
+        circle_marker_7b16891af5b47373c028d1b1a69ac68e.bindPopup(popup_ea0c00e360dceea542cc7274e6bf9aeb)
+        ;
+
+        
+    
+    
+            feature_group_262a50036a3621e312603de674f70fb4.addTo(map_59f77cfde77acbec99c1b529a10a3443);
+        
+    
+            var feature_group_f85d21fecf9f81796c20a259df7f2ddf = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_7dfa45fa27db03985cb7cf1dadb04b0d = L.circleMarker(
+                [29.98943059577685, 31.558568127920243],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_962b86669547294b262571b74ec47968 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d435fb75d7a0a7b794af38449ba8bb8d = $(`<div id="html_d435fb75d7a0a7b794af38449ba8bb8d" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 1</b><br>Nearest station #4: 5.28 km</div>`)[0];
+                popup_962b86669547294b262571b74ec47968.setContent(html_d435fb75d7a0a7b794af38449ba8bb8d);
+            
+        
+
+        circle_marker_7dfa45fa27db03985cb7cf1dadb04b0d.bindPopup(popup_962b86669547294b262571b74ec47968)
+        ;
+
+        
+    
+    
+            var circle_marker_8049fd7b90c72e56543d4613a6f68712 = L.circleMarker(
+                [29.908101922191197, 31.25575281814253],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_3aa70c945a2f3a22fa8f3d33339964e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e4b87acd5ecf856133db70b9ef6064c9 = $(`<div id="html_e4b87acd5ecf856133db70b9ef6064c9" style="width: 100.0%; height: 100.0%;"><b>Maadi Area 2</b><br>Nearest station #13: 2.51 km</div>`)[0];
+                popup_3aa70c945a2f3a22fa8f3d33339964e3.setContent(html_e4b87acd5ecf856133db70b9ef6064c9);
+            
+        
+
+        circle_marker_8049fd7b90c72e56543d4613a6f68712.bindPopup(popup_3aa70c945a2f3a22fa8f3d33339964e3)
+        ;
+
+        
+    
+    
+            var circle_marker_48df2bb2ce53d14fca425da5eb8212e1 = L.circleMarker(
+                [29.709742269407993, 31.19117734410601],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_790a0f2afd3a7c4b0cb74393098ca1b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e6e377a1af76348a5cd7cc5976c80b2 = $(`<div id="html_5e6e377a1af76348a5cd7cc5976c80b2" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 3</b><br>Nearest station #14: 2.65 km</div>`)[0];
+                popup_790a0f2afd3a7c4b0cb74393098ca1b4.setContent(html_5e6e377a1af76348a5cd7cc5976c80b2);
+            
+        
+
+        circle_marker_48df2bb2ce53d14fca425da5eb8212e1.bindPopup(popup_790a0f2afd3a7c4b0cb74393098ca1b4)
+        ;
+
+        
+    
+    
+            var circle_marker_9e321915cc43b8886f01a3dc9d98b2de = L.circleMarker(
+                [30.075000637094302, 31.230971381390255],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_987090d61561d3201bdb9831bec87fc2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_236754f0ad3d636f665899bbae6a4e70 = $(`<div id="html_236754f0ad3d636f665899bbae6a4e70" style="width: 100.0%; height: 100.0%;"><b>Garden City Area 4</b><br>Nearest station #1: 3.55 km</div>`)[0];
+                popup_987090d61561d3201bdb9831bec87fc2.setContent(html_236754f0ad3d636f665899bbae6a4e70);
+            
+        
+
+        circle_marker_9e321915cc43b8886f01a3dc9d98b2de.bindPopup(popup_987090d61561d3201bdb9831bec87fc2)
+        ;
+
+        
+    
+    
+            var circle_marker_574837638736ad0cf7898ba76e224a5b = L.circleMarker(
+                [29.9935127789446, 30.9903448496063],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_8c949447c882086d95425ccd4b4eab3f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f4df5692a85a6bb81a4c50f906f7ed5 = $(`<div id="html_1f4df5692a85a6bb81a4c50f906f7ed5" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 5</b><br>Nearest station #15: 2.69 km</div>`)[0];
+                popup_8c949447c882086d95425ccd4b4eab3f.setContent(html_1f4df5692a85a6bb81a4c50f906f7ed5);
+            
+        
+
+        circle_marker_574837638736ad0cf7898ba76e224a5b.bindPopup(popup_8c949447c882086d95425ccd4b4eab3f)
+        ;
+
+        
+    
+    
+            var circle_marker_f11a0ef6e4ee1f935fe8142539b6c48c = L.circleMarker(
+                [30.056230263558827, 31.44775333400562],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_dfa0b12661b1a06dd9e9980fb896b5b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b662512322617b9f4dbfe12c4a8e050 = $(`<div id="html_5b662512322617b9f4dbfe12c4a8e050" style="width: 100.0%; height: 100.0%;"><b>New Cairo Area 6</b><br>Nearest station #2: 4.39 km</div>`)[0];
+                popup_dfa0b12661b1a06dd9e9980fb896b5b2.setContent(html_5b662512322617b9f4dbfe12c4a8e050);
+            
+        
+
+        circle_marker_f11a0ef6e4ee1f935fe8142539b6c48c.bindPopup(popup_dfa0b12661b1a06dd9e9980fb896b5b2)
+        ;
+
+        
+    
+    
+            var circle_marker_06aa01621a1b5e9875e7fd3b8e8cf5bc = L.circleMarker(
+                [29.913513371316885, 31.65945822195541],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_8fa00f279d58cc13663e032d9f751242 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a79a1a42638c4dc8547ef10b4d9a1558 = $(`<div id="html_a79a1a42638c4dc8547ef10b4d9a1558" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 7</b><br>Nearest station #4: 7.62 km</div>`)[0];
+                popup_8fa00f279d58cc13663e032d9f751242.setContent(html_a79a1a42638c4dc8547ef10b4d9a1558);
+            
+        
+
+        circle_marker_06aa01621a1b5e9875e7fd3b8e8cf5bc.bindPopup(popup_8fa00f279d58cc13663e032d9f751242)
+        ;
+
+        
+    
+    
+            var circle_marker_d0c11a4e42d82cdec839b1b2044243af = L.circleMarker(
+                [30.294985147366386, 30.96100483706677],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_7dca21f96f17eabc00ac61024118d2de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6cf1c5207725859f129ac7e5220c480d = $(`<div id="html_6cf1c5207725859f129ac7e5220c480d" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 8</b><br>Nearest station #7: 2.21 km</div>`)[0];
+                popup_7dca21f96f17eabc00ac61024118d2de.setContent(html_6cf1c5207725859f129ac7e5220c480d);
+            
+        
+
+        circle_marker_d0c11a4e42d82cdec839b1b2044243af.bindPopup(popup_7dca21f96f17eabc00ac61024118d2de)
+        ;
+
+        
+    
+    
+            var circle_marker_d6ed703ff6dc2d3315049c2a96fb7dd7 = L.circleMarker(
+                [30.063944982896384, 31.25437296752182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_3b10a26b5d25690e11ac72ffa69cc7de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42084bb420f539743de3da7d273b08bd = $(`<div id="html_42084bb420f539743de3da7d273b08bd" style="width: 100.0%; height: 100.0%;"><b>Downtown Area 9</b><br>Nearest station #1: 1.22 km</div>`)[0];
+                popup_3b10a26b5d25690e11ac72ffa69cc7de.setContent(html_42084bb420f539743de3da7d273b08bd);
+            
+        
+
+        circle_marker_d6ed703ff6dc2d3315049c2a96fb7dd7.bindPopup(popup_3b10a26b5d25690e11ac72ffa69cc7de)
+        ;
+
+        
+    
+    
+            var circle_marker_f50d1facedf1b173335e62fe090b7294 = L.circleMarker(
+                [29.998411324262694, 31.42694907719178],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_d33f9641d7cbffe7746beedcad8a0aaf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9e61b46b1ebbdfa87cdbd7218f248ed0 = $(`<div id="html_9e61b46b1ebbdfa87cdbd7218f248ed0" style="width: 100.0%; height: 100.0%;"><b>New Cairo Area 10</b><br>Nearest station #2: 3.00 km</div>`)[0];
+                popup_d33f9641d7cbffe7746beedcad8a0aaf.setContent(html_9e61b46b1ebbdfa87cdbd7218f248ed0);
+            
+        
+
+        circle_marker_f50d1facedf1b173335e62fe090b7294.bindPopup(popup_d33f9641d7cbffe7746beedcad8a0aaf)
+        ;
+
+        
+    
+    
+            var circle_marker_d8194175ab9516def0d4fc0aa324ba2e = L.circleMarker(
+                [30.0777190740159, 31.317503753172442],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_23572d0c05c80c9f83daf92ff3fa8c35 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7486380bb1ae126471e6084880d864aa = $(`<div id="html_7486380bb1ae126471e6084880d864aa" style="width: 100.0%; height: 100.0%;"><b>Khan el-Khalili Area 11</b><br>Nearest station #1: 5.03 km</div>`)[0];
+                popup_23572d0c05c80c9f83daf92ff3fa8c35.setContent(html_7486380bb1ae126471e6084880d864aa);
+            
+        
+
+        circle_marker_d8194175ab9516def0d4fc0aa324ba2e.bindPopup(popup_23572d0c05c80c9f83daf92ff3fa8c35)
+        ;
+
+        
+    
+    
+            var circle_marker_a7994e4c0b5be8430c281c379de3428a = L.circleMarker(
+                [29.979598345293894, 31.262576675452113],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_15f5b823a0ddff1f536ca94e5ea98f99 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_276070ed6155d87285a8b93149f3360c = $(`<div id="html_276070ed6155d87285a8b93149f3360c" style="width: 100.0%; height: 100.0%;"><b>Old Cairo Area 12</b><br>Nearest station #13: 5.45 km</div>`)[0];
+                popup_15f5b823a0ddff1f536ca94e5ea98f99.setContent(html_276070ed6155d87285a8b93149f3360c);
+            
+        
+
+        circle_marker_a7994e4c0b5be8430c281c379de3428a.bindPopup(popup_15f5b823a0ddff1f536ca94e5ea98f99)
+        ;
+
+        
+    
+    
+            var circle_marker_221eaa0aa1c40214762f0f72f227f09b = L.circleMarker(
+                [30.069441942073734, 31.170052063172008],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_9086056906c20cbef839a0497c484eae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87214203c693e329daaf748bff191c7c = $(`<div id="html_87214203c693e329daaf748bff191c7c" style="width: 100.0%; height: 100.0%;"><b>Mohandessin Area 13</b><br>Nearest station #5: 3.62 km</div>`)[0];
+                popup_9086056906c20cbef839a0497c484eae.setContent(html_87214203c693e329daaf748bff191c7c);
+            
+        
+
+        circle_marker_221eaa0aa1c40214762f0f72f227f09b.bindPopup(popup_9086056906c20cbef839a0497c484eae)
+        ;
+
+        
+    
+    
+            var circle_marker_7edf94751a82eaf59c1311f09a3b7b2f = L.circleMarker(
+                [29.94317054112716, 31.04532529353722],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_ac3d62615295dc218482dc8822a6aeef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d19e34c22ad9f81583efb89ecee737a2 = $(`<div id="html_d19e34c22ad9f81583efb89ecee737a2" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 14</b><br>Nearest station #15: 5.65 km</div>`)[0];
+                popup_ac3d62615295dc218482dc8822a6aeef.setContent(html_d19e34c22ad9f81583efb89ecee737a2);
+            
+        
+
+        circle_marker_7edf94751a82eaf59c1311f09a3b7b2f.bindPopup(popup_ac3d62615295dc218482dc8822a6aeef)
+        ;
+
+        
+    
+    
+            var circle_marker_e750753a2915bc7e14ccda60cdcdc103 = L.circleMarker(
+                [30.113851110338235, 31.236341058127],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_807570ddeab43b2921bb0595fe9f87db = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c39c94bb64b718e17eaf06931b2e7ee = $(`<div id="html_5c39c94bb64b718e17eaf06931b2e7ee" style="width: 100.0%; height: 100.0%;"><b>Shubra Area 15</b><br>Nearest station #1: 5.99 km</div>`)[0];
+                popup_807570ddeab43b2921bb0595fe9f87db.setContent(html_5c39c94bb64b718e17eaf06931b2e7ee);
+            
+        
+
+        circle_marker_e750753a2915bc7e14ccda60cdcdc103.bindPopup(popup_807570ddeab43b2921bb0595fe9f87db)
+        ;
+
+        
+    
+    
+            var circle_marker_8811e5ca8af1d97b40c2590f61ee1bd3 = L.circleMarker(
+                [30.192805770932832, 31.420478840763703],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_2a9886a8bcf52001457bd5d94d4dd920 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_11d63f278e3c20abdb3fd5db16ac649d = $(`<div id="html_11d63f278e3c20abdb3fd5db16ac649d" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 16</b><br>Nearest station #6: 6.49 km</div>`)[0];
+                popup_2a9886a8bcf52001457bd5d94d4dd920.setContent(html_11d63f278e3c20abdb3fd5db16ac649d);
+            
+        
+
+        circle_marker_8811e5ca8af1d97b40c2590f61ee1bd3.bindPopup(popup_2a9886a8bcf52001457bd5d94d4dd920)
+        ;
+
+        
+    
+    
+            var circle_marker_f5813cf0b3b664588240db80129994c8 = L.circleMarker(
+                [30.007464197984508, 31.297697076357604],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_74621ce8bb202adc39e0b4d59a571551 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_790ee2830f7621cde8171a782ccf0f17 = $(`<div id="html_790ee2830f7621cde8171a782ccf0f17" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 17</b><br>Nearest station #1: 7.22 km</div>`)[0];
+                popup_74621ce8bb202adc39e0b4d59a571551.setContent(html_790ee2830f7621cde8171a782ccf0f17);
+            
+        
+
+        circle_marker_f5813cf0b3b664588240db80129994c8.bindPopup(popup_74621ce8bb202adc39e0b4d59a571551)
+        ;
+
+        
+    
+    
+            var circle_marker_cec27dde00a48d65f17d128196cf5c16 = L.circleMarker(
+                [30.133972359005547, 31.177737599793804],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_c43a766c4878dffd1032a3bd674ca221 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fff2982e2e03f66bd8c3198c27ef15d4 = $(`<div id="html_fff2982e2e03f66bd8c3198c27ef15d4" style="width: 100.0%; height: 100.0%;"><b>Zamalek Area 18</b><br>Nearest station #5: 10.40 km</div>`)[0];
+                popup_c43a766c4878dffd1032a3bd674ca221.setContent(html_fff2982e2e03f66bd8c3198c27ef15d4);
+            
+        
+
+        circle_marker_cec27dde00a48d65f17d128196cf5c16.bindPopup(popup_c43a766c4878dffd1032a3bd674ca221)
+        ;
+
+        
+    
+    
+            var circle_marker_20b0f21212f97dc3203de06c63f2bdd1 = L.circleMarker(
+                [30.01823017365064, 31.290623887929726],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_0f878088041b7ce2c5e399885ea33969 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f25fbc67cb9111155ef6c0915ac8816a = $(`<div id="html_f25fbc67cb9111155ef6c0915ac8816a" style="width: 100.0%; height: 100.0%;"><b>City of the Dead Area 19</b><br>Nearest station #1: 5.85 km</div>`)[0];
+                popup_0f878088041b7ce2c5e399885ea33969.setContent(html_f25fbc67cb9111155ef6c0915ac8816a);
+            
+        
+
+        circle_marker_20b0f21212f97dc3203de06c63f2bdd1.bindPopup(popup_0f878088041b7ce2c5e399885ea33969)
+        ;
+
+        
+    
+    
+            var circle_marker_719d728cdb937c0ee44dd9e2397831e5 = L.circleMarker(
+                [30.09870519609068, 31.302400625583996],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_1fb4a4eb2e8a53ec617dee36e373ceea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8f053bbc396f64f8765a8156c431688d = $(`<div id="html_8f053bbc396f64f8765a8156c431688d" style="width: 100.0%; height: 100.0%;"><b>Abbassia Area 20</b><br>Nearest station #1: 4.94 km</div>`)[0];
+                popup_1fb4a4eb2e8a53ec617dee36e373ceea.setContent(html_8f053bbc396f64f8765a8156c431688d);
+            
+        
+
+        circle_marker_719d728cdb937c0ee44dd9e2397831e5.bindPopup(popup_1fb4a4eb2e8a53ec617dee36e373ceea)
+        ;
+
+        
+    
+    
+            var circle_marker_d4dcdf79ea1a603dd5dbcd6245010f29 = L.circleMarker(
+                [30.10530891465657, 31.291391305380326],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_bde9ee8ecaa8cc167ae2cdf99dcb85fe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b84d7d5bcf013097b6cb4194acbba268 = $(`<div id="html_b84d7d5bcf013097b6cb4194acbba268" style="width: 100.0%; height: 100.0%;"><b>Nasr City Area 21</b><br>Nearest station #1: 4.90 km</div>`)[0];
+                popup_bde9ee8ecaa8cc167ae2cdf99dcb85fe.setContent(html_b84d7d5bcf013097b6cb4194acbba268);
+            
+        
+
+        circle_marker_d4dcdf79ea1a603dd5dbcd6245010f29.bindPopup(popup_bde9ee8ecaa8cc167ae2cdf99dcb85fe)
+        ;
+
+        
+    
+    
+            var circle_marker_905910a94f69cdf08d881195a71033ec = L.circleMarker(
+                [29.804985537278807, 30.83830246752016],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_9760ff3b74d72085a82b2e9a077b778b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3a249b06fa4b6c49eb708dad1d1e29c6 = $(`<div id="html_3a249b06fa4b6c49eb708dad1d1e29c6" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 22</b><br>Nearest station #12: 9.78 km</div>`)[0];
+                popup_9760ff3b74d72085a82b2e9a077b778b.setContent(html_3a249b06fa4b6c49eb708dad1d1e29c6);
+            
+        
+
+        circle_marker_905910a94f69cdf08d881195a71033ec.bindPopup(popup_9760ff3b74d72085a82b2e9a077b778b)
+        ;
+
+        
+    
+    
+            var circle_marker_319d845efac825a69bb8fb8987c05be8 = L.circleMarker(
+                [30.043909158123178, 31.24107184093305],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_9dc2df9e7353760b10674a334f3ef144 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e38ab2ef99cbef0129ee8a5319ff954d = $(`<div id="html_e38ab2ef99cbef0129ee8a5319ff954d" style="width: 100.0%; height: 100.0%;"><b>Dokki Area 23</b><br>Nearest station #1: 3.53 km</div>`)[0];
+                popup_9dc2df9e7353760b10674a334f3ef144.setContent(html_e38ab2ef99cbef0129ee8a5319ff954d);
+            
+        
+
+        circle_marker_319d845efac825a69bb8fb8987c05be8.bindPopup(popup_9dc2df9e7353760b10674a334f3ef144)
+        ;
+
+        
+    
+    
+            var circle_marker_9acbc2674254ee7e162f84c1830eee78 = L.circleMarker(
+                [30.07315156772853, 31.18607940571259],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_f51c136428da0a6f7523eb5cd8781b5e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c17ecc7e5dfe8e0bd74230ed594b63a6 = $(`<div id="html_c17ecc7e5dfe8e0bd74230ed594b63a6" style="width: 100.0%; height: 100.0%;"><b>Mohandessin Area 24</b><br>Nearest station #5: 5.01 km</div>`)[0];
+                popup_f51c136428da0a6f7523eb5cd8781b5e.setContent(html_c17ecc7e5dfe8e0bd74230ed594b63a6);
+            
+        
+
+        circle_marker_9acbc2674254ee7e162f84c1830eee78.bindPopup(popup_f51c136428da0a6f7523eb5cd8781b5e)
+        ;
+
+        
+    
+    
+            var circle_marker_1ca1d85145090e50bb6f5b192ac4cb92 = L.circleMarker(
+                [29.744715627916936, 30.806270865820473],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_7ba79442b6c75f8dc04463adcd2399b9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_646c5957a130fa8a5bc2920f54922dc7 = $(`<div id="html_646c5957a130fa8a5bc2920f54922dc7" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 25</b><br>Nearest station #12: 2.43 km</div>`)[0];
+                popup_7ba79442b6c75f8dc04463adcd2399b9.setContent(html_646c5957a130fa8a5bc2920f54922dc7);
+            
+        
+
+        circle_marker_1ca1d85145090e50bb6f5b192ac4cb92.bindPopup(popup_7ba79442b6c75f8dc04463adcd2399b9)
+        ;
+
+        
+    
+    
+            var circle_marker_1a291d4171d779e97b13488dc8838e07 = L.circleMarker(
+                [29.996187215948495, 31.28861376163535],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_d8fdb21494cd089a59129aef5ca6a2b9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d578e5aded749a760960c387ebc72908 = $(`<div id="html_d578e5aded749a760960c387ebc72908" style="width: 100.0%; height: 100.0%;"><b>Khan el-Khalili Area 26</b><br>Nearest station #13: 7.87 km</div>`)[0];
+                popup_d8fdb21494cd089a59129aef5ca6a2b9.setContent(html_d578e5aded749a760960c387ebc72908);
+            
+        
+
+        circle_marker_1a291d4171d779e97b13488dc8838e07.bindPopup(popup_d8fdb21494cd089a59129aef5ca6a2b9)
+        ;
+
+        
+    
+    
+            var circle_marker_fd6af8b3ce99e9593026ebb6ed7f660f = L.circleMarker(
+                [30.038333599650766, 31.470093902921345],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_badf2a7e5712c9e3db6aeb846ad53c18 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2427a444cc2e88d23e3c360ef3d56c45 = $(`<div id="html_2427a444cc2e88d23e3c360ef3d56c45" style="width: 100.0%; height: 100.0%;"><b>New Cairo Area 27</b><br>Nearest station #2: 3.08 km</div>`)[0];
+                popup_badf2a7e5712c9e3db6aeb846ad53c18.setContent(html_2427a444cc2e88d23e3c360ef3d56c45);
+            
+        
+
+        circle_marker_fd6af8b3ce99e9593026ebb6ed7f660f.bindPopup(popup_badf2a7e5712c9e3db6aeb846ad53c18)
+        ;
+
+        
+    
+    
+            var circle_marker_c3dc5628cc44d357194c2c78a1cfad64 = L.circleMarker(
+                [30.04056815319708, 31.180951575958012],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_5fd721e60fac627daf27d61761c61f73 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f5c005c857ab75181190134e8378f2c0 = $(`<div id="html_f5c005c857ab75181190134e8378f2c0" style="width: 100.0%; height: 100.0%;"><b>Mohandessin Area 28</b><br>Nearest station #5: 3.40 km</div>`)[0];
+                popup_5fd721e60fac627daf27d61761c61f73.setContent(html_f5c005c857ab75181190134e8378f2c0);
+            
+        
+
+        circle_marker_c3dc5628cc44d357194c2c78a1cfad64.bindPopup(popup_5fd721e60fac627daf27d61761c61f73)
+        ;
+
+        
+    
+    
+            var circle_marker_dafa7834a273f4fc36aa8ce3940fea4f = L.circleMarker(
+                [30.018179938740964, 31.173778517444052],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_58d018ab27f378904098e33db28db12d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_67d1b7956a2e66d05b2326a8f4324508 = $(`<div id="html_67d1b7956a2e66d05b2326a8f4324508" style="width: 100.0%; height: 100.0%;"><b>Shubra Area 29</b><br>Nearest station #5: 3.96 km</div>`)[0];
+                popup_58d018ab27f378904098e33db28db12d.setContent(html_67d1b7956a2e66d05b2326a8f4324508);
+            
+        
+
+        circle_marker_dafa7834a273f4fc36aa8ce3940fea4f.bindPopup(popup_58d018ab27f378904098e33db28db12d)
+        ;
+
+        
+    
+    
+            var circle_marker_74f0ba80123f4c4c41be11a91142c727 = L.circleMarker(
+                [30.41216262163685, 31.415566420429673],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_571413b52b79a35d72156537fb6e54a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8852145e8c18ea218d65b264cad1dd3c = $(`<div id="html_8852145e8c18ea218d65b264cad1dd3c" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 30</b><br>Nearest station #10: 0.86 km</div>`)[0];
+                popup_571413b52b79a35d72156537fb6e54a3.setContent(html_8852145e8c18ea218d65b264cad1dd3c);
+            
+        
+
+        circle_marker_74f0ba80123f4c4c41be11a91142c727.bindPopup(popup_571413b52b79a35d72156537fb6e54a3)
+        ;
+
+        
+    
+    
+            var circle_marker_33434f5f29e02319378b2d03e4e07002 = L.circleMarker(
+                [30.125165273400373, 31.283968121302237],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_7d5696904fb52d15c8fd95f1cd37d5de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9d19ce218237a15c5322d63aa25a68ee = $(`<div id="html_9d19ce218237a15c5322d63aa25a68ee" style="width: 100.0%; height: 100.0%;"><b>Nasr City Area 31</b><br>Nearest station #1: 6.70 km</div>`)[0];
+                popup_7d5696904fb52d15c8fd95f1cd37d5de.setContent(html_9d19ce218237a15c5322d63aa25a68ee);
+            
+        
+
+        circle_marker_33434f5f29e02319378b2d03e4e07002.bindPopup(popup_7d5696904fb52d15c8fd95f1cd37d5de)
+        ;
+
+        
+    
+    
+            var circle_marker_2ecc58ba4a8f601c515427bd913b0e2a = L.circleMarker(
+                [29.99886535192941, 31.030847405660644],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_0a883d8a19108c9b767495204df6a308 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_973e4033cdb1936f75a77666923570c5 = $(`<div id="html_973e4033cdb1936f75a77666923570c5" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 32</b><br>Nearest station #15: 4.72 km</div>`)[0];
+                popup_0a883d8a19108c9b767495204df6a308.setContent(html_973e4033cdb1936f75a77666923570c5);
+            
+        
+
+        circle_marker_2ecc58ba4a8f601c515427bd913b0e2a.bindPopup(popup_0a883d8a19108c9b767495204df6a308)
+        ;
+
+        
+    
+    
+            var circle_marker_6bcc0b5a274f6373fc8389e8bebee920 = L.circleMarker(
+                [30.075313866185585, 31.132270580956344],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_8988d44d13ce1e4f75a8b411810c2540 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5bb6cee07aab7428758f21e0f8c30746 = $(`<div id="html_5bb6cee07aab7428758f21e0f8c30746" style="width: 100.0%; height: 100.0%;"><b>Dokki Area 33</b><br>Nearest station #5: 3.67 km</div>`)[0];
+                popup_8988d44d13ce1e4f75a8b411810c2540.setContent(html_5bb6cee07aab7428758f21e0f8c30746);
+            
+        
+
+        circle_marker_6bcc0b5a274f6373fc8389e8bebee920.bindPopup(popup_8988d44d13ce1e4f75a8b411810c2540)
+        ;
+
+        
+    
+    
+            var circle_marker_5c3a6f7fc883594c72f5e4099e2753c1 = L.circleMarker(
+                [30.027398102104954, 31.423263251993642],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_23e68412d96af4e3324f0c516d746b1a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fa7a3a13c8aaddfb686af697157e14c8 = $(`<div id="html_fa7a3a13c8aaddfb686af697157e14c8" style="width: 100.0%; height: 100.0%;"><b>New Cairo Area 34</b><br>Nearest station #2: 2.83 km</div>`)[0];
+                popup_23e68412d96af4e3324f0c516d746b1a.setContent(html_fa7a3a13c8aaddfb686af697157e14c8);
+            
+        
+
+        circle_marker_5c3a6f7fc883594c72f5e4099e2753c1.bindPopup(popup_23e68412d96af4e3324f0c516d746b1a)
+        ;
+
+        
+    
+    
+            var circle_marker_30ef9914eec34d32638c55143fc22e88 = L.circleMarker(
+                [30.27710757685169, 31.43334666035584],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_42447a3665c7225df1a0e5b25265932e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2694bbb51dca28d1fa201f2a69d0d24a = $(`<div id="html_2694bbb51dca28d1fa201f2a69d0d24a" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 35</b><br>Nearest station #8: 4.47 km</div>`)[0];
+                popup_42447a3665c7225df1a0e5b25265932e.setContent(html_2694bbb51dca28d1fa201f2a69d0d24a);
+            
+        
+
+        circle_marker_30ef9914eec34d32638c55143fc22e88.bindPopup(popup_42447a3665c7225df1a0e5b25265932e)
+        ;
+
+        
+    
+    
+            var circle_marker_c431e9ac1d1eb6d6012d540552e21b0e = L.circleMarker(
+                [30.172080050109443, 31.322528996763715],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_78e628620ba28e1fc2a333c2ef7cb986 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f02e1da5165d39fcb80a0954dbfb1edd = $(`<div id="html_f02e1da5165d39fcb80a0954dbfb1edd" style="width: 100.0%; height: 100.0%;"><b>Heliopolis Area 36</b><br>Nearest station #6: 9.89 km</div>`)[0];
+                popup_78e628620ba28e1fc2a333c2ef7cb986.setContent(html_f02e1da5165d39fcb80a0954dbfb1edd);
+            
+        
+
+        circle_marker_c431e9ac1d1eb6d6012d540552e21b0e.bindPopup(popup_78e628620ba28e1fc2a333c2ef7cb986)
+        ;
+
+        
+    
+    
+            var circle_marker_275fcd1371e95fd43098fe87b7173060 = L.circleMarker(
+                [30.091367403573035, 31.24319985077873],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_c5e407d262ff2a83e4cd53381260083e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_33de551cf901797c8049aff86e808029 = $(`<div id="html_33de551cf901797c8049aff86e808029" style="width: 100.0%; height: 100.0%;"><b>Shubra Area 37</b><br>Nearest station #1: 3.55 km</div>`)[0];
+                popup_c5e407d262ff2a83e4cd53381260083e.setContent(html_33de551cf901797c8049aff86e808029);
+            
+        
+
+        circle_marker_275fcd1371e95fd43098fe87b7173060.bindPopup(popup_c5e407d262ff2a83e4cd53381260083e)
+        ;
+
+        
+    
+    
+            var circle_marker_235cd6311a9b3bdddf3b435d8e357cfd = L.circleMarker(
+                [30.08275919766173, 31.28254863010488],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_322d324253c3341f0b63f03318487fc2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_485c43efdca0a13121c1c4d34573159c = $(`<div id="html_485c43efdca0a13121c1c4d34573159c" style="width: 100.0%; height: 100.0%;"><b>Zamalek Area 38</b><br>Nearest station #1: 2.34 km</div>`)[0];
+                popup_322d324253c3341f0b63f03318487fc2.setContent(html_485c43efdca0a13121c1c4d34573159c);
+            
+        
+
+        circle_marker_235cd6311a9b3bdddf3b435d8e357cfd.bindPopup(popup_322d324253c3341f0b63f03318487fc2)
+        ;
+
+        
+    
+    
+            var circle_marker_e280037a753b369037c93ffa715e6f1f = L.circleMarker(
+                [30.071211181026264, 31.291604082636752],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_21c585eb7853db7673c81ad4299f5e44 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a39c3e1d7bb32fc983b3469c4b93ef5 = $(`<div id="html_2a39c3e1d7bb32fc983b3469c4b93ef5" style="width: 100.0%; height: 100.0%;"><b>Heliopolis Area 39</b><br>Nearest station #1: 2.44 km</div>`)[0];
+                popup_21c585eb7853db7673c81ad4299f5e44.setContent(html_2a39c3e1d7bb32fc983b3469c4b93ef5);
+            
+        
+
+        circle_marker_e280037a753b369037c93ffa715e6f1f.bindPopup(popup_21c585eb7853db7673c81ad4299f5e44)
+        ;
+
+        
+    
+    
+            var circle_marker_62749faf9e93871e517592f2a22b1de3 = L.circleMarker(
+                [30.06608179260665, 31.199999978630554],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_2106ac98c8722ffc8760e50682b9a308 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3bc9f330d5033a08239e03c4dbf49138 = $(`<div id="html_3bc9f330d5033a08239e03c4dbf49138" style="width: 100.0%; height: 100.0%;"><b>Dokki Area 40</b><br>Nearest station #5: 5.73 km</div>`)[0];
+                popup_2106ac98c8722ffc8760e50682b9a308.setContent(html_3bc9f330d5033a08239e03c4dbf49138);
+            
+        
+
+        circle_marker_62749faf9e93871e517592f2a22b1de3.bindPopup(popup_2106ac98c8722ffc8760e50682b9a308)
+        ;
+
+        
+    
+    
+            var circle_marker_a4e52de64616eff7274d77f8056f4c04 = L.circleMarker(
+                [30.028513093248613, 31.49029170452526],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_fc5030391cd834efd7fb12d16e43e4e9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a339ec26293501f29f2eb838f256df66 = $(`<div id="html_a339ec26293501f29f2eb838f256df66" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 41</b><br>Nearest station #2: 4.09 km</div>`)[0];
+                popup_fc5030391cd834efd7fb12d16e43e4e9.setContent(html_a339ec26293501f29f2eb838f256df66);
+            
+        
+
+        circle_marker_a4e52de64616eff7274d77f8056f4c04.bindPopup(popup_fc5030391cd834efd7fb12d16e43e4e9)
+        ;
+
+        
+    
+    
+            var circle_marker_d8fa0cc6ce787230487de325125b2f93 = L.circleMarker(
+                [30.156552890126132, 31.43112381097033],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_839c649a5d102bef942538d0e4e66af8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_741cb37d55fe46a39e9377970c5d67a0 = $(`<div id="html_741cb37d55fe46a39e9377970c5d67a0" style="width: 100.0%; height: 100.0%;"><b>Nasr City Area 42</b><br>Nearest station #6: 2.86 km</div>`)[0];
+                popup_839c649a5d102bef942538d0e4e66af8.setContent(html_741cb37d55fe46a39e9377970c5d67a0);
+            
+        
+
+        circle_marker_d8fa0cc6ce787230487de325125b2f93.bindPopup(popup_839c649a5d102bef942538d0e4e66af8)
+        ;
+
+        
+    
+    
+            var circle_marker_0fd87fe4ae3b2a75962a2a757a8c1e0c = L.circleMarker(
+                [30.10899524713847, 31.211970460951257],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_cb1695ba36bd13aabecdfb2f288e9863 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_89ea55e3c57d7c536081b6910ad9d55d = $(`<div id="html_89ea55e3c57d7c536081b6910ad9d55d" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 43</b><br>Nearest station #1: 7.05 km</div>`)[0];
+                popup_cb1695ba36bd13aabecdfb2f288e9863.setContent(html_89ea55e3c57d7c536081b6910ad9d55d);
+            
+        
+
+        circle_marker_0fd87fe4ae3b2a75962a2a757a8c1e0c.bindPopup(popup_cb1695ba36bd13aabecdfb2f288e9863)
+        ;
+
+        
+    
+    
+            var circle_marker_3bef3285cf5d138ef5f4079157132663 = L.circleMarker(
+                [29.931308923291912, 30.92245564404231],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_dc442555b5709fd4c513de85df77e4a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c270f273eb68c9cf1327758d62aa6e0e = $(`<div id="html_c270f273eb68c9cf1327758d62aa6e0e" style="width: 100.0%; height: 100.0%;"><b>6th October City Area 44</b><br>Nearest station #15: 8.18 km</div>`)[0];
+                popup_dc442555b5709fd4c513de85df77e4a5.setContent(html_c270f273eb68c9cf1327758d62aa6e0e);
+            
+        
+
+        circle_marker_3bef3285cf5d138ef5f4079157132663.bindPopup(popup_dc442555b5709fd4c513de85df77e4a5)
+        ;
+
+        
+    
+    
+            var circle_marker_9f5e9906ba484df4d0a8f891ee337fcc = L.circleMarker(
+                [30.147969110385446, 31.34036718553504],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_e94cbd17401021758845d3d3b9d8d679 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce3d10a371fcd6c3f9803d698fe64340 = $(`<div id="html_ce3d10a371fcd6c3f9803d698fe64340" style="width: 100.0%; height: 100.0%;"><b>Heliopolis Area 45</b><br>Nearest station #6: 7.40 km</div>`)[0];
+                popup_e94cbd17401021758845d3d3b9d8d679.setContent(html_ce3d10a371fcd6c3f9803d698fe64340);
+            
+        
+
+        circle_marker_9f5e9906ba484df4d0a8f891ee337fcc.bindPopup(popup_e94cbd17401021758845d3d3b9d8d679)
+        ;
+
+        
+    
+    
+            var circle_marker_6d3262b4bb8cba4c4c326ddf548280d3 = L.circleMarker(
+                [30.024639267488304, 31.3114161440917],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_6cc0bd1170e9517448dab2c767d536f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d08d20575b49041b04ba0a42057ce7df = $(`<div id="html_d08d20575b49041b04ba0a42057ce7df" style="width: 100.0%; height: 100.0%;"><b>Heliopolis Area 46</b><br>Nearest station #1: 6.34 km</div>`)[0];
+                popup_6cc0bd1170e9517448dab2c767d536f9.setContent(html_d08d20575b49041b04ba0a42057ce7df);
+            
+        
+
+        circle_marker_6d3262b4bb8cba4c4c326ddf548280d3.bindPopup(popup_6cc0bd1170e9517448dab2c767d536f9)
+        ;
+
+        
+    
+    
+            var circle_marker_0b4739f506efe41321dc322479189662 = L.circleMarker(
+                [30.079330904512815, 31.346256846111096],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_e1b43659a2ceaab06473adadfaf18785 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_162412d7a3204bbf997fb0f1ef75d6b3 = $(`<div id="html_162412d7a3204bbf997fb0f1ef75d6b3" style="width: 100.0%; height: 100.0%;"><b>Abbassia Area 47</b><br>Nearest station #1: 7.77 km</div>`)[0];
+                popup_e1b43659a2ceaab06473adadfaf18785.setContent(html_162412d7a3204bbf997fb0f1ef75d6b3);
+            
+        
+
+        circle_marker_0b4739f506efe41321dc322479189662.bindPopup(popup_e1b43659a2ceaab06473adadfaf18785)
+        ;
+
+        
+    
+    
+            var circle_marker_c7e53cae6784b019e91237319e6a34f8 = L.circleMarker(
+                [29.69140685136031, 31.610240660623848],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_f1587f157f462244afa87f714b69e828 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b23f6bce05d6071fc55df0b8e26aa14f = $(`<div id="html_b23f6bce05d6071fc55df0b8e26aa14f" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 48</b><br>Nearest station #3: 1.59 km</div>`)[0];
+                popup_f1587f157f462244afa87f714b69e828.setContent(html_b23f6bce05d6071fc55df0b8e26aa14f);
+            
+        
+
+        circle_marker_c7e53cae6784b019e91237319e6a34f8.bindPopup(popup_f1587f157f462244afa87f714b69e828)
+        ;
+
+        
+    
+    
+            var circle_marker_e67678b1ff9ca58fdbec1140f88e49b0 = L.circleMarker(
+                [29.93406482709589, 31.345781137959584],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_ed925d8f7a4aed4870347c72d9166fc2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff78bf27cd9c681e00497e613aa4540b = $(`<div id="html_ff78bf27cd9c681e00497e613aa4540b" style="width: 100.0%; height: 100.0%;"><b>Maadi Area 49</b><br>Nearest station #13: 8.52 km</div>`)[0];
+                popup_ed925d8f7a4aed4870347c72d9166fc2.setContent(html_ff78bf27cd9c681e00497e613aa4540b);
+            
+        
+
+        circle_marker_e67678b1ff9ca58fdbec1140f88e49b0.bindPopup(popup_ed925d8f7a4aed4870347c72d9166fc2)
+        ;
+
+        
+    
+    
+            var circle_marker_01e802ae7203a05273f46f20bf682fd8 = L.circleMarker(
+                [30.321866324857872, 31.071255003540443],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_9f7340d789e54f7dd1d8ef099ec2e7ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dac6c527086673792182a61e9ed95b59 = $(`<div id="html_dac6c527086673792182a61e9ed95b59" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 50</b><br>Nearest station #7: 10.16 km</div>`)[0];
+                popup_9f7340d789e54f7dd1d8ef099ec2e7ed.setContent(html_dac6c527086673792182a61e9ed95b59);
+            
+        
+
+        circle_marker_01e802ae7203a05273f46f20bf682fd8.bindPopup(popup_9f7340d789e54f7dd1d8ef099ec2e7ed)
+        ;
+
+        
+    
+    
+            var circle_marker_f81699c4aaabb85d7513ebc8f6376960 = L.circleMarker(
+                [29.85626605432611, 31.249381416308545],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_dc178428275c8da4d980852ce3471c25 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8322ea04cd818ec08d9e0948dbb53802 = $(`<div id="html_8322ea04cd818ec08d9e0948dbb53802" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 51</b><br>Nearest station #13: 8.30 km</div>`)[0];
+                popup_dc178428275c8da4d980852ce3471c25.setContent(html_8322ea04cd818ec08d9e0948dbb53802);
+            
+        
+
+        circle_marker_f81699c4aaabb85d7513ebc8f6376960.bindPopup(popup_dc178428275c8da4d980852ce3471c25)
+        ;
+
+        
+    
+    
+            var circle_marker_440efc65da13484a07304f5eb5c4efeb = L.circleMarker(
+                [30.018034553705675, 31.255873249066696],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_c461c6584360e8c1eed6835de509f5cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_29219df27bbf0dc5b1f505335f5820cf = $(`<div id="html_29219df27bbf0dc5b1f505335f5820cf" style="width: 100.0%; height: 100.0%;"><b>Downtown Area 52</b><br>Nearest station #1: 5.50 km</div>`)[0];
+                popup_c461c6584360e8c1eed6835de509f5cd.setContent(html_29219df27bbf0dc5b1f505335f5820cf);
+            
+        
+
+        circle_marker_440efc65da13484a07304f5eb5c4efeb.bindPopup(popup_c461c6584360e8c1eed6835de509f5cd)
+        ;
+
+        
+    
+    
+            var circle_marker_b4436b3c150925ffb2fc81b7e2fee4ba = L.circleMarker(
+                [30.04249280915562, 31.341066456297497],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_e99d9f00fb82f6ea256571fb604a461e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a53b04901f788f3434d161949edd484 = $(`<div id="html_8a53b04901f788f3434d161949edd484" style="width: 100.0%; height: 100.0%;"><b>Heliopolis Area 53</b><br>Nearest station #1: 7.63 km</div>`)[0];
+                popup_e99d9f00fb82f6ea256571fb604a461e.setContent(html_8a53b04901f788f3434d161949edd484);
+            
+        
+
+        circle_marker_b4436b3c150925ffb2fc81b7e2fee4ba.bindPopup(popup_e99d9f00fb82f6ea256571fb604a461e)
+        ;
+
+        
+    
+    
+            var circle_marker_4240590ee892282cb72b479edb5d3c96 = L.circleMarker(
+                [30.396153241790675, 31.589931975728078],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_04363f7d417eb4309853760cbfc02565 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0873f3f84c2499b9e61825071cb06e40 = $(`<div id="html_0873f3f84c2499b9e61825071cb06e40" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 54</b><br>Nearest station #11: 1.08 km</div>`)[0];
+                popup_04363f7d417eb4309853760cbfc02565.setContent(html_0873f3f84c2499b9e61825071cb06e40);
+            
+        
+
+        circle_marker_4240590ee892282cb72b479edb5d3c96.bindPopup(popup_04363f7d417eb4309853760cbfc02565)
+        ;
+
+        
+    
+    
+            var circle_marker_20febace066dbdf74fd42f1bb218b586 = L.circleMarker(
+                [30.096270078376808, 31.219872212561373],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_6d3efdf32d9d40f6d7a0d6c9dd12f10d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b91a544dd4ab286651618e693678273e = $(`<div id="html_b91a544dd4ab286651618e693678273e" style="width: 100.0%; height: 100.0%;"><b>Dokki Area 55</b><br>Nearest station #1: 5.57 km</div>`)[0];
+                popup_6d3efdf32d9d40f6d7a0d6c9dd12f10d.setContent(html_b91a544dd4ab286651618e693678273e);
+            
+        
+
+        circle_marker_20febace066dbdf74fd42f1bb218b586.bindPopup(popup_6d3efdf32d9d40f6d7a0d6c9dd12f10d)
+        ;
+
+        
+    
+    
+            var circle_marker_e7d38664bd944665fb641da51e7d09d9 = L.circleMarker(
+                [30.056794039730775, 31.279109019639822],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_1d861da24b19b47cbf14c164ff5b1bcb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9d0a4c3d775597ebc040582ea2321240 = $(`<div id="html_9d0a4c3d775597ebc040582ea2321240" style="width: 100.0%; height: 100.0%;"><b>Dokki Area 56</b><br>Nearest station #1: 1.62 km</div>`)[0];
+                popup_1d861da24b19b47cbf14c164ff5b1bcb.setContent(html_9d0a4c3d775597ebc040582ea2321240);
+            
+        
+
+        circle_marker_e7d38664bd944665fb641da51e7d09d9.bindPopup(popup_1d861da24b19b47cbf14c164ff5b1bcb)
+        ;
+
+        
+    
+    
+            var circle_marker_7ec57dd7585c5bfc62fb40c70f130ac8 = L.circleMarker(
+                [30.01159889357258, 31.238432836033947],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_7a9ffbd8c6adc60a364748acc525b4f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f00b1cce3d8fd3204b1eea5105b7ff2f = $(`<div id="html_f00b1cce3d8fd3204b1eea5105b7ff2f" style="width: 100.0%; height: 100.0%;"><b>Nasr City Area 57</b><br>Nearest station #1: 6.69 km</div>`)[0];
+                popup_7a9ffbd8c6adc60a364748acc525b4f5.setContent(html_f00b1cce3d8fd3204b1eea5105b7ff2f);
+            
+        
+
+        circle_marker_7ec57dd7585c5bfc62fb40c70f130ac8.bindPopup(popup_7a9ffbd8c6adc60a364748acc525b4f5)
+        ;
+
+        
+    
+    
+            var circle_marker_25b28cc0655af978910930a74ef14048 = L.circleMarker(
+                [30.03192163540228, 31.21075657054888],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_31006e140d01c055d74781453822252e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_995f3ee844c33de5a29f0b445b0ba31f = $(`<div id="html_995f3ee844c33de5a29f0b445b0ba31f" style="width: 100.0%; height: 100.0%;"><b>Garden City Area 58</b><br>Nearest station #5: 6.39 km</div>`)[0];
+                popup_31006e140d01c055d74781453822252e.setContent(html_995f3ee844c33de5a29f0b445b0ba31f);
+            
+        
+
+        circle_marker_25b28cc0655af978910930a74ef14048.bindPopup(popup_31006e140d01c055d74781453822252e)
+        ;
+
+        
+    
+    
+            var circle_marker_b35ea07b979a20b72606bcd6c0dcabe4 = L.circleMarker(
+                [29.983482944308044, 31.24303728414699],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_06fdbfc6a10c4b7baa60dcd77d283f98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1542692bd29c83d44832e49e8111569d = $(`<div id="html_1542692bd29c83d44832e49e8111569d" style="width: 100.0%; height: 100.0%;"><b>City of the Dead Area 59</b><br>Nearest station #13: 6.02 km</div>`)[0];
+                popup_06fdbfc6a10c4b7baa60dcd77d283f98.setContent(html_1542692bd29c83d44832e49e8111569d);
+            
+        
+
+        circle_marker_b35ea07b979a20b72606bcd6c0dcabe4.bindPopup(popup_06fdbfc6a10c4b7baa60dcd77d283f98)
+        ;
+
+        
+    
+    
+            var circle_marker_b9e9e3c70d3aa332bb538e3921eb8ed9 = L.circleMarker(
+                [30.469083783454874, 31.236497067582107],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_f85d21fecf9f81796c20a259df7f2ddf);
+        
+    
+        var popup_cf154e98a2354b5b5c0c8207fde111a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c643dcf223d0178c302ef16447f852be = $(`<div id="html_c643dcf223d0178c302ef16447f852be" style="width: 100.0%; height: 100.0%;"><b>Cairo Neighborhood 60</b><br>Nearest station #9: 7.18 km</div>`)[0];
+                popup_cf154e98a2354b5b5c0c8207fde111a9.setContent(html_c643dcf223d0178c302ef16447f852be);
+            
+        
+
+        circle_marker_b9e9e3c70d3aa332bb538e3921eb8ed9.bindPopup(popup_cf154e98a2354b5b5c0c8207fde111a9)
+        ;
+
+        
+    
+    
+            feature_group_f85d21fecf9f81796c20a259df7f2ddf.addTo(map_59f77cfde77acbec99c1b529a10a3443);
+        
+    
+            var feature_group_805431db4fee13dfc214e1742274d7da = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_d409a939f3dcc02138a9b400d90510de = L.marker(
+                [30.0667, 31.2667],
+                {
+}
+            ).addTo(feature_group_805431db4fee13dfc214e1742274d7da);
+        
+    
+            var icon_c0380c46af6a3409b34b247aca7400a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_60ef7f900acc374ade845beb539ad0a4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f5b9e7c9795d274f485c75bed78ff8cc = $(`<div id="html_f5b9e7c9795d274f485c75bed78ff8cc" style="width: 100.0%; height: 100.0%;"><b>Station 1</b><br>Near: Abbassia<br>Serves 21 neighborhoods</div>`)[0];
+                popup_60ef7f900acc374ade845beb539ad0a4.setContent(html_f5b9e7c9795d274f485c75bed78ff8cc);
+            
+        
+
+        marker_d409a939f3dcc02138a9b400d90510de.bindPopup(popup_60ef7f900acc374ade845beb539ad0a4)
+        ;
+
+        
+    
+    
+            marker_d409a939f3dcc02138a9b400d90510de.bindTooltip(
+                `<div>
+                     Station 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d409a939f3dcc02138a9b400d90510de.setIcon(icon_c0380c46af6a3409b34b247aca7400a2);
+            
+    
+            var marker_b0c00829d6eb2b3d6e8cb07934aef23e = L.marker(
+                [30.0167, 31.45],
+                {
+}
+            ).addTo(feature_group_805431db4fee13dfc214e1742274d7da);
+        
+    
+            var icon_595a08f9739f9946b55b4e33d8a9e329 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_503e216f107a38f84ab759d5614609bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2dccad20c0f5bbfa664d27439b946519 = $(`<div id="html_2dccad20c0f5bbfa664d27439b946519" style="width: 100.0%; height: 100.0%;"><b>Station 2</b><br>Near: New Cairo<br>Serves 5 neighborhoods</div>`)[0];
+                popup_503e216f107a38f84ab759d5614609bd.setContent(html_2dccad20c0f5bbfa664d27439b946519);
+            
+        
+
+        marker_b0c00829d6eb2b3d6e8cb07934aef23e.bindPopup(popup_503e216f107a38f84ab759d5614609bd)
+        ;
+
+        
+    
+    
+            marker_b0c00829d6eb2b3d6e8cb07934aef23e.bindTooltip(
+                `<div>
+                     Station 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b0c00829d6eb2b3d6e8cb07934aef23e.setIcon(icon_595a08f9739f9946b55b4e33d8a9e329);
+            
+    
+            var marker_75c3ce102cff1864bae33fbc7d39a90c = L.marker(
+                [29.684440000000002, 31.59583],
+                {
+}
+            ).addTo(feature_group_805431db4fee13dfc214e1742274d7da);
+        
+    
+            var icon_f32b38a1dd1e2f1819388c5b2c778e1d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f92d75fbd86fa33b864fc9b4f9c8557d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_899fc5d359a701239e6e606d2b08a5c3 = $(`<div id="html_899fc5d359a701239e6e606d2b08a5c3" style="width: 100.0%; height: 100.0%;"><b>Station 3</b><br>Near: New Cairo<br>Serves 1 neighborhoods</div>`)[0];
+                popup_f92d75fbd86fa33b864fc9b4f9c8557d.setContent(html_899fc5d359a701239e6e606d2b08a5c3);
+            
+        
+
+        marker_75c3ce102cff1864bae33fbc7d39a90c.bindPopup(popup_f92d75fbd86fa33b864fc9b4f9c8557d)
+        ;
+
+        
+    
+    
+            marker_75c3ce102cff1864bae33fbc7d39a90c.bindTooltip(
+                `<div>
+                     Station 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_75c3ce102cff1864bae33fbc7d39a90c.setIcon(icon_f32b38a1dd1e2f1819388c5b2c778e1d);
+            
+    
+            var marker_60edf2cc31ea771301f662a55bade94e = L.marker(
+                [29.95444, 31.59583],
+                {
+}
+            ).addTo(feature_group_805431db4fee13dfc214e1742274d7da);
+        
+    
+            var icon_c4cd3e18a64fc2ac30eb330a8d3e3860 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_891123b7f59426ea24bda036a342b72f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0da233bc36358bddaaa3c41f54e79355 = $(`<div id="html_0da233bc36358bddaaa3c41f54e79355" style="width: 100.0%; height: 100.0%;"><b>Station 4</b><br>Near: New Cairo<br>Serves 2 neighborhoods</div>`)[0];
+                popup_891123b7f59426ea24bda036a342b72f.setContent(html_0da233bc36358bddaaa3c41f54e79355);
+            
+        
+
+        marker_60edf2cc31ea771301f662a55bade94e.bindPopup(popup_891123b7f59426ea24bda036a342b72f)
+        ;
+
+        
+    
+    
+            marker_60edf2cc31ea771301f662a55bade94e.bindTooltip(
+                `<div>
+                     Station 4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_60edf2cc31ea771301f662a55bade94e.setIcon(icon_c4cd3e18a64fc2ac30eb330a8d3e3860);
+            
+    
+            var marker_e4f6c1f1fdfba7cd775a172583e83501 = L.marker(
+                [30.04444, 31.14583],
+                {
+}
+            ).addTo(feature_group_805431db4fee13dfc214e1742274d7da);
+        
+    
+            var icon_b113fac1066c376b88f3281b3377c446 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a4b4de10529037e077e022dc019d49b7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d8d4d05647e251f6131071ebf5621ed5 = $(`<div id="html_d8d4d05647e251f6131071ebf5621ed5" style="width: 100.0%; height: 100.0%;"><b>Station 5</b><br>Near: Mohandessin<br>Serves 8 neighborhoods</div>`)[0];
+                popup_a4b4de10529037e077e022dc019d49b7.setContent(html_d8d4d05647e251f6131071ebf5621ed5);
+            
+        
+
+        marker_e4f6c1f1fdfba7cd775a172583e83501.bindPopup(popup_a4b4de10529037e077e022dc019d49b7)
+        ;
+
+        
+    
+    
+            marker_e4f6c1f1fdfba7cd775a172583e83501.bindTooltip(
+                `<div>
+                     Station 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e4f6c1f1fdfba7cd775a172583e83501.setIcon(icon_b113fac1066c376b88f3281b3377c446);
+            
+    
+            var marker_ec28657ed9e6f6695309bc857f57b6ed = L.marker(
+                [30.13444, 31.41583],
+                {
+}
+            ).addTo(feature_group_805431db4fee13dfc214e1742274d7da);
+        
+    
+            var icon_028cfe7036c7ff495398d2f7c0deb995 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29b02d2f164e1c3213dd202f4102bd13 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_849d439a1be360a87e9219f0c4aab7ca = $(`<div id="html_849d439a1be360a87e9219f0c4aab7ca" style="width: 100.0%; height: 100.0%;"><b>Station 6</b><br>Near: Heliopolis<br>Serves 4 neighborhoods</div>`)[0];
+                popup_29b02d2f164e1c3213dd202f4102bd13.setContent(html_849d439a1be360a87e9219f0c4aab7ca);
+            
+        
+
+        marker_ec28657ed9e6f6695309bc857f57b6ed.bindPopup(popup_29b02d2f164e1c3213dd202f4102bd13)
+        ;
+
+        
+    
+    
+            marker_ec28657ed9e6f6695309bc857f57b6ed.bindTooltip(
+                `<div>
+                     Station 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ec28657ed9e6f6695309bc857f57b6ed.setIcon(icon_028cfe7036c7ff495398d2f7c0deb995);
+            
+    
+            var marker_4660e899e7b8df519e9aaff3f978ace4 = L.marker(
+                [30.31444, 30.96583],
+                {
+}
+            ).addTo(feature_group_805431db4fee13dfc214e1742274d7da);
+        
+    
+            var icon_150685ea99061c05aa05150c65e9cc44 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c0070064d13c8838b54517df2f3d13c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_43c4b9ecb5e6d45a49252f98e70085f4 = $(`<div id="html_43c4b9ecb5e6d45a49252f98e70085f4" style="width: 100.0%; height: 100.0%;"><b>Station 7</b><br>Near: Shubra<br>Serves 2 neighborhoods</div>`)[0];
+                popup_1c0070064d13c8838b54517df2f3d13c.setContent(html_43c4b9ecb5e6d45a49252f98e70085f4);
+            
+        
+
+        marker_4660e899e7b8df519e9aaff3f978ace4.bindPopup(popup_1c0070064d13c8838b54517df2f3d13c)
+        ;
+
+        
+    
+    
+            marker_4660e899e7b8df519e9aaff3f978ace4.bindTooltip(
+                `<div>
+                     Station 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4660e899e7b8df519e9aaff3f978ace4.setIcon(icon_150685ea99061c05aa05150c65e9cc44);
+            
+    
+            var marker_1dbaa17bc39f27d98a268e74f0288501 = L.marker(
+                [30.31444, 31.41583],
+                {
+}
+            ).addTo(feature_group_805431db4fee13dfc214e1742274d7da);
+        
+    
+            var icon_2a460dd4474b6e137a1071c397d8c916 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7f12da2ffb7b12c2103f01abce67f210 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f24f894ca341c6f5c0e29bbcdb76e852 = $(`<div id="html_f24f894ca341c6f5c0e29bbcdb76e852" style="width: 100.0%; height: 100.0%;"><b>Station 8</b><br>Near: Heliopolis<br>Serves 1 neighborhoods</div>`)[0];
+                popup_7f12da2ffb7b12c2103f01abce67f210.setContent(html_f24f894ca341c6f5c0e29bbcdb76e852);
+            
+        
+
+        marker_1dbaa17bc39f27d98a268e74f0288501.bindPopup(popup_7f12da2ffb7b12c2103f01abce67f210)
+        ;
+
+        
+    
+    
+            marker_1dbaa17bc39f27d98a268e74f0288501.bindTooltip(
+                `<div>
+                     Station 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1dbaa17bc39f27d98a268e74f0288501.setIcon(icon_2a460dd4474b6e137a1071c397d8c916);
+            
+    
+            var marker_c9d4a1530d1f3709be4344c5e223c0cc = L.marker(
+                [30.40444, 31.23583],
+                {
+}
+            ).addTo(feature_group_805431db4fee13dfc214e1742274d7da);
+        
+    
+            var icon_08d69367c3e40759966b8564a2c16499 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e69fce7707b59cb2689438582bc19116 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b524e10f68646056a7d8561096ce59b = $(`<div id="html_0b524e10f68646056a7d8561096ce59b" style="width: 100.0%; height: 100.0%;"><b>Station 9</b><br>Near: Heliopolis<br>Serves 1 neighborhoods</div>`)[0];
+                popup_e69fce7707b59cb2689438582bc19116.setContent(html_0b524e10f68646056a7d8561096ce59b);
+            
+        
+
+        marker_c9d4a1530d1f3709be4344c5e223c0cc.bindPopup(popup_e69fce7707b59cb2689438582bc19116)
+        ;
+
+        
+    
+    
+            marker_c9d4a1530d1f3709be4344c5e223c0cc.bindTooltip(
+                `<div>
+                     Station 9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c9d4a1530d1f3709be4344c5e223c0cc.setIcon(icon_08d69367c3e40759966b8564a2c16499);
+            
+    
+            var marker_a4e7f8d9460ab2c2099a7e1d70247b85 = L.marker(
+                [30.40444, 31.41583],
+                {
+}
+            ).addTo(feature_group_805431db4fee13dfc214e1742274d7da);
+        
+    
+            var icon_bd5420e3d6baaa7f9768adfc6d1ebd68 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b911f548e53eaa3501db9a18dc94b4ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8d6bf7c0b9ebd714e887620edac639f = $(`<div id="html_b8d6bf7c0b9ebd714e887620edac639f" style="width: 100.0%; height: 100.0%;"><b>Station 10</b><br>Near: Heliopolis<br>Serves 1 neighborhoods</div>`)[0];
+                popup_b911f548e53eaa3501db9a18dc94b4ac.setContent(html_b8d6bf7c0b9ebd714e887620edac639f);
+            
+        
+
+        marker_a4e7f8d9460ab2c2099a7e1d70247b85.bindPopup(popup_b911f548e53eaa3501db9a18dc94b4ac)
+        ;
+
+        
+    
+    
+            marker_a4e7f8d9460ab2c2099a7e1d70247b85.bindTooltip(
+                `<div>
+                     Station 10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a4e7f8d9460ab2c2099a7e1d70247b85.setIcon(icon_bd5420e3d6baaa7f9768adfc6d1ebd68);
+            
+    
+            var marker_bf3b8aa35a14a4c61f18eff30b77faa4 = L.marker(
+                [30.40444, 31.59583],
+                {
+}
+            ).addTo(feature_group_805431db4fee13dfc214e1742274d7da);
+        
+    
+            var icon_35d55a4256c2eaf08eb72bb85a96ffa9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2cd52cb6d11e1e6b562b2b69109d8588 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cba55d5966133a4aca982f833f6a39fa = $(`<div id="html_cba55d5966133a4aca982f833f6a39fa" style="width: 100.0%; height: 100.0%;"><b>Station 11</b><br>Near: Heliopolis<br>Serves 1 neighborhoods</div>`)[0];
+                popup_2cd52cb6d11e1e6b562b2b69109d8588.setContent(html_cba55d5966133a4aca982f833f6a39fa);
+            
+        
+
+        marker_bf3b8aa35a14a4c61f18eff30b77faa4.bindPopup(popup_2cd52cb6d11e1e6b562b2b69109d8588)
+        ;
+
+        
+    
+    
+            marker_bf3b8aa35a14a4c61f18eff30b77faa4.bindTooltip(
+                `<div>
+                     Station 11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bf3b8aa35a14a4c61f18eff30b77faa4.setIcon(icon_35d55a4256c2eaf08eb72bb85a96ffa9);
+            
+    
+            var marker_9e1b95503d33eded79667d3aa9b6d52c = L.marker(
+                [29.723947752296127, 30.79837265893738],
+                {
+}
+            ).addTo(feature_group_805431db4fee13dfc214e1742274d7da);
+        
+    
+            var icon_349c97fde1ecb756ef2b3ccb31816081 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_329d0cde548facf1f8587f5fa3591e07 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f69a4d216e2e266ff9bfce22cebbbc88 = $(`<div id="html_f69a4d216e2e266ff9bfce22cebbbc88" style="width: 100.0%; height: 100.0%;"><b>Station 12</b><br>Near: 6th October City<br>Serves 2 neighborhoods</div>`)[0];
+                popup_329d0cde548facf1f8587f5fa3591e07.setContent(html_f69a4d216e2e266ff9bfce22cebbbc88);
+            
+        
+
+        marker_9e1b95503d33eded79667d3aa9b6d52c.bindPopup(popup_329d0cde548facf1f8587f5fa3591e07)
+        ;
+
+        
+    
+    
+            marker_9e1b95503d33eded79667d3aa9b6d52c.bindTooltip(
+                `<div>
+                     Station 12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9e1b95503d33eded79667d3aa9b6d52c.setIcon(icon_349c97fde1ecb756ef2b3ccb31816081);
+            
+    
+            var marker_a5307e11526edd569e52df07d10a80ab = L.marker(
+                [29.930692724613618, 31.257207653845875],
+                {
+}
+            ).addTo(feature_group_805431db4fee13dfc214e1742274d7da);
+        
+    
+            var icon_d6f2e0bff3c070befcbe3dfdc8e335f6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a230969c5476a41c934d1fd552e99839 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_792a2f07992ae242da6e1c28d09e3903 = $(`<div id="html_792a2f07992ae242da6e1c28d09e3903" style="width: 100.0%; height: 100.0%;"><b>Station 13</b><br>Near: Maadi<br>Serves 6 neighborhoods</div>`)[0];
+                popup_a230969c5476a41c934d1fd552e99839.setContent(html_792a2f07992ae242da6e1c28d09e3903);
+            
+        
+
+        marker_a5307e11526edd569e52df07d10a80ab.bindPopup(popup_a230969c5476a41c934d1fd552e99839)
+        ;
+
+        
+    
+    
+            marker_a5307e11526edd569e52df07d10a80ab.bindTooltip(
+                `<div>
+                     Station 13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a5307e11526edd569e52df07d10a80ab.setIcon(icon_d6f2e0bff3c070befcbe3dfdc8e335f6);
+            
+    
+            var marker_910f0e54a70ec53b4a17ca3adff579a7 = L.marker(
+                [29.720231569858562, 31.21591954662137],
+                {
+}
+            ).addTo(feature_group_805431db4fee13dfc214e1742274d7da);
+        
+    
+            var icon_69d18cf4c621942eb2c8b4dbcbb391b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cd86cb8da2480b92deaa27a57576b1dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d881c4baf38f07db541a1747ac28e5d = $(`<div id="html_0d881c4baf38f07db541a1747ac28e5d" style="width: 100.0%; height: 100.0%;"><b>Station 14</b><br>Near: Maadi<br>Serves 1 neighborhoods</div>`)[0];
+                popup_cd86cb8da2480b92deaa27a57576b1dd.setContent(html_0d881c4baf38f07db541a1747ac28e5d);
+            
+        
+
+        marker_910f0e54a70ec53b4a17ca3adff579a7.bindPopup(popup_cd86cb8da2480b92deaa27a57576b1dd)
+        ;
+
+        
+    
+    
+            marker_910f0e54a70ec53b4a17ca3adff579a7.bindTooltip(
+                `<div>
+                     Station 14
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_910f0e54a70ec53b4a17ca3adff579a7.setIcon(icon_69d18cf4c621942eb2c8b4dbcbb391b5);
+            
+    
+            var marker_e604ca09ec47d8b1ad6fced0fefd3656 = L.marker(
+                [29.9696404317354, 30.995142946475987],
+                {
+}
+            ).addTo(feature_group_805431db4fee13dfc214e1742274d7da);
+        
+    
+            var icon_fc403fe3b6b3bce696c88ac3305756ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ee0486deb83c81df0c25fcc9b989a6d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d16fe8be3ab871111ff7cd8a760de62d = $(`<div id="html_d16fe8be3ab871111ff7cd8a760de62d" style="width: 100.0%; height: 100.0%;"><b>Station 15</b><br>Near: 6th October City<br>Serves 4 neighborhoods</div>`)[0];
+                popup_ee0486deb83c81df0c25fcc9b989a6d5.setContent(html_d16fe8be3ab871111ff7cd8a760de62d);
+            
+        
+
+        marker_e604ca09ec47d8b1ad6fced0fefd3656.bindPopup(popup_ee0486deb83c81df0c25fcc9b989a6d5)
+        ;
+
+        
+    
+    
+            marker_e604ca09ec47d8b1ad6fced0fefd3656.bindTooltip(
+                `<div>
+                     Station 15
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e604ca09ec47d8b1ad6fced0fefd3656.setIcon(icon_fc403fe3b6b3bce696c88ac3305756ed);
+            
+    
+            feature_group_805431db4fee13dfc214e1742274d7da.addTo(map_59f77cfde77acbec99c1b529a10a3443);
+        
+    
+            var feature_group_2fa72b0785c66c2895cabcd9af34df84 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_fbeb811d7edd9e89f3cc9ccf587d6c9b = L.polyline(
+                [[29.98943059577685, 31.558568127920243], [29.95444, 31.59583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_d3837074965851eb65e5a200c20194cd = L.polyline(
+                [[29.908101922191197, 31.25575281814253], [29.930692724613618, 31.257207653845875]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_6cab9be408d2f9cbe5060221d0b2d671 = L.polyline(
+                [[29.709742269407993, 31.19117734410601], [29.720231569858562, 31.21591954662137]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_e8924db562aeba7b7ceb6874669fa6b4 = L.polyline(
+                [[30.075000637094302, 31.230971381390255], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_1997eb21681b1a2df85f1e4880351709 = L.polyline(
+                [[29.9935127789446, 30.9903448496063], [29.9696404317354, 30.995142946475987]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_8b22216df9781e703a3eb7aec7f7fb84 = L.polyline(
+                [[30.056230263558827, 31.44775333400562], [30.0167, 31.45]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_815698400fd75ea8a22af01aa34d109d = L.polyline(
+                [[29.913513371316885, 31.65945822195541], [29.95444, 31.59583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_f7dbadced476a7fe53ab692e0bdd7cd0 = L.polyline(
+                [[30.294985147366386, 30.96100483706677], [30.31444, 30.96583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_2aff45e5bf07e32ca72df7e79490f927 = L.polyline(
+                [[30.063944982896384, 31.25437296752182], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_18fdc1966ea7c0f8e424cfcda38832ca = L.polyline(
+                [[29.998411324262694, 31.42694907719178], [30.0167, 31.45]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_221e8abb50e000c2eb274e0ff4d22476 = L.polyline(
+                [[30.0777190740159, 31.317503753172442], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_56c1682da0a02a14fc05848c250b2a05 = L.polyline(
+                [[29.979598345293894, 31.262576675452113], [29.930692724613618, 31.257207653845875]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_6ce49014870ae9cfaace2f8d05b73c08 = L.polyline(
+                [[30.069441942073734, 31.170052063172008], [30.04444, 31.14583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_a586abef413a13c0292145cfec8915e9 = L.polyline(
+                [[29.94317054112716, 31.04532529353722], [29.9696404317354, 30.995142946475987]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_8f179d990040f30814f7ff209c85e80b = L.polyline(
+                [[30.113851110338235, 31.236341058127], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_b908efa9953ed13e69d84acbf0e3a8fd = L.polyline(
+                [[30.192805770932832, 31.420478840763703], [30.13444, 31.41583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_2e5d3fb27d1907fa368a614945f8c66d = L.polyline(
+                [[30.007464197984508, 31.297697076357604], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_629b96beba27589a6c2acc7bfd827259 = L.polyline(
+                [[30.133972359005547, 31.177737599793804], [30.04444, 31.14583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_5bff5050a01d17770270fc1c0c54f1bd = L.polyline(
+                [[30.01823017365064, 31.290623887929726], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_e7f6444fef6f1175eff902ad34531e71 = L.polyline(
+                [[30.09870519609068, 31.302400625583996], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_83c5b2edc9c0cd2d44b8c88805ad102c = L.polyline(
+                [[30.10530891465657, 31.291391305380326], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_7ffbd366a710afbad5b927728a799376 = L.polyline(
+                [[29.804985537278807, 30.83830246752016], [29.723947752296127, 30.79837265893738]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_b80144013f08e834f52147d49b56f60f = L.polyline(
+                [[30.043909158123178, 31.24107184093305], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_25997904026fc9e57af492a743acd2da = L.polyline(
+                [[30.07315156772853, 31.18607940571259], [30.04444, 31.14583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_5bdfb35e5b0c8f58fd6b9cd7be3507fc = L.polyline(
+                [[29.744715627916936, 30.806270865820473], [29.723947752296127, 30.79837265893738]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_60b740854d0fed32525ccea1a8ab0754 = L.polyline(
+                [[29.996187215948495, 31.28861376163535], [29.930692724613618, 31.257207653845875]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_45b621d4a818c07541238dad338a6de1 = L.polyline(
+                [[30.038333599650766, 31.470093902921345], [30.0167, 31.45]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_263cafb2300b714cc3e14a3d0c0b5572 = L.polyline(
+                [[30.04056815319708, 31.180951575958012], [30.04444, 31.14583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_a99b0c9bf4c838bc980f4f511329b8b7 = L.polyline(
+                [[30.018179938740964, 31.173778517444052], [30.04444, 31.14583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_06116530f4c447bd3bc469bf42579fdd = L.polyline(
+                [[30.41216262163685, 31.415566420429673], [30.40444, 31.41583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_ebbca5b7ac53cfcd42d51db56c71dc8c = L.polyline(
+                [[30.125165273400373, 31.283968121302237], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_3b4523fc25e954013f4c8b9d627e48b1 = L.polyline(
+                [[29.99886535192941, 31.030847405660644], [29.9696404317354, 30.995142946475987]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_e47c3ed974f3dc6c4360f6d2ecee7ab1 = L.polyline(
+                [[30.075313866185585, 31.132270580956344], [30.04444, 31.14583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_6d63d8ad291720fea9834711c376da91 = L.polyline(
+                [[30.027398102104954, 31.423263251993642], [30.0167, 31.45]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_a4f63a0e82181ccafa9e5c458259c1b4 = L.polyline(
+                [[30.27710757685169, 31.43334666035584], [30.31444, 31.41583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_82388aaf291da2614e634008b14d398a = L.polyline(
+                [[30.172080050109443, 31.322528996763715], [30.13444, 31.41583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_2853724773d593f323789632c7fa0760 = L.polyline(
+                [[30.091367403573035, 31.24319985077873], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_ea984f29b3281e1b48a941d92b0063fd = L.polyline(
+                [[30.08275919766173, 31.28254863010488], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_d9f343bcfc29f0f564c1e49584064471 = L.polyline(
+                [[30.071211181026264, 31.291604082636752], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_4a7a45beec0ef9205ae73d748cc8cb2f = L.polyline(
+                [[30.06608179260665, 31.199999978630554], [30.04444, 31.14583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_c3cfae4367275bb5c433a3baed5a67eb = L.polyline(
+                [[30.028513093248613, 31.49029170452526], [30.0167, 31.45]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_1da1d3f07bf04c347e87bfa3e2f86975 = L.polyline(
+                [[30.156552890126132, 31.43112381097033], [30.13444, 31.41583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_4d6a688540c5ca6fa553a909ac1e11a0 = L.polyline(
+                [[30.10899524713847, 31.211970460951257], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_35bde958108eb32cc9df828ddc536941 = L.polyline(
+                [[29.931308923291912, 30.92245564404231], [29.9696404317354, 30.995142946475987]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_f5b7e416273a0bd7d4310e41db5ad744 = L.polyline(
+                [[30.147969110385446, 31.34036718553504], [30.13444, 31.41583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_91913d176ca3783ba649289857faaf0c = L.polyline(
+                [[30.024639267488304, 31.3114161440917], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_655cb4ec07a76d5b234b000d4001df65 = L.polyline(
+                [[30.079330904512815, 31.346256846111096], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_0f9c05f6bc5d2d9a1c85b9fb02c2f0ee = L.polyline(
+                [[29.69140685136031, 31.610240660623848], [29.684440000000002, 31.59583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_f942805c45b8469f9c1b8fd35c8ba1cb = L.polyline(
+                [[29.93406482709589, 31.345781137959584], [29.930692724613618, 31.257207653845875]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_9a00834fbf0ab70b42f3bf0c40cda3ed = L.polyline(
+                [[30.321866324857872, 31.071255003540443], [30.31444, 30.96583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_2a821f867d9ebefb9370fa20bfb584d0 = L.polyline(
+                [[29.85626605432611, 31.249381416308545], [29.930692724613618, 31.257207653845875]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_11722488541c1d6287ab5e04b64bce3f = L.polyline(
+                [[30.018034553705675, 31.255873249066696], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_104fbe469ef1799794771410939718b0 = L.polyline(
+                [[30.04249280915562, 31.341066456297497], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_7f2122c98639a2ecef53600af7e8c6a2 = L.polyline(
+                [[30.396153241790675, 31.589931975728078], [30.40444, 31.59583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_7749cffaaa98ecfa0ae8ddab420ca5bd = L.polyline(
+                [[30.096270078376808, 31.219872212561373], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_a0c3bf9e174be4030ffa75c8de26bfaa = L.polyline(
+                [[30.056794039730775, 31.279109019639822], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_f8a4aa5c0c0eab92a42796af170fbf33 = L.polyline(
+                [[30.01159889357258, 31.238432836033947], [30.0667, 31.2667]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_ca43b5b53c4a2db6299c49bec2b38338 = L.polyline(
+                [[30.03192163540228, 31.21075657054888], [30.04444, 31.14583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_d9e6d1574a6a9c8bf17c719dd406bd26 = L.polyline(
+                [[29.983482944308044, 31.24303728414699], [29.930692724613618, 31.257207653845875]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            var poly_line_6552f3c15cf6eb1aff2c33456e9a9bfe = L.polyline(
+                [[30.469083783454874, 31.236497067582107], [30.40444, 31.23583]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_2fa72b0785c66c2895cabcd9af34df84);
+        
+    
+            feature_group_2fa72b0785c66c2895cabcd9af34df84.addTo(map_59f77cfde77acbec99c1b529a10a3443);
+        
+    
+            var feature_group_041f6acd466eac827dbd1258f3ee7b98 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_03018740121b2e8c73687e8e735a25d8 = L.circle(
+                [30.0667, 31.2667],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.04, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10400.250026634863, "stroke": true, "weight": 1}
+            ).addTo(feature_group_041f6acd466eac827dbd1258f3ee7b98);
+        
+    
+            var circle_034d49f6b55f50c15906347b4e7a457b = L.circle(
+                [30.0167, 31.45],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.04, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10400.250026634863, "stroke": true, "weight": 1}
+            ).addTo(feature_group_041f6acd466eac827dbd1258f3ee7b98);
+        
+    
+            var circle_e37a692415e930f239f41686a96d45ab = L.circle(
+                [29.684440000000002, 31.59583],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.04, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10400.250026634863, "stroke": true, "weight": 1}
+            ).addTo(feature_group_041f6acd466eac827dbd1258f3ee7b98);
+        
+    
+            var circle_d8a6a3163bf000d939286805148020db = L.circle(
+                [29.95444, 31.59583],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.04, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10400.250026634863, "stroke": true, "weight": 1}
+            ).addTo(feature_group_041f6acd466eac827dbd1258f3ee7b98);
+        
+    
+            var circle_7b60b7cda48128ccad6e48c27c3f5c89 = L.circle(
+                [30.04444, 31.14583],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.04, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10400.250026634863, "stroke": true, "weight": 1}
+            ).addTo(feature_group_041f6acd466eac827dbd1258f3ee7b98);
+        
+    
+            var circle_e3d535d3eb6c25b9f4bf14b064fd8788 = L.circle(
+                [30.13444, 31.41583],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.04, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10400.250026634863, "stroke": true, "weight": 1}
+            ).addTo(feature_group_041f6acd466eac827dbd1258f3ee7b98);
+        
+    
+            var circle_f9e20d30049f302c10e9116159494c06 = L.circle(
+                [30.31444, 30.96583],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.04, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10400.250026634863, "stroke": true, "weight": 1}
+            ).addTo(feature_group_041f6acd466eac827dbd1258f3ee7b98);
+        
+    
+            var circle_e97673457c7d816743a5c3a56642d878 = L.circle(
+                [30.31444, 31.41583],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.04, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10400.250026634863, "stroke": true, "weight": 1}
+            ).addTo(feature_group_041f6acd466eac827dbd1258f3ee7b98);
+        
+    
+            var circle_7dc5eacebd7cb5cf0b703e19c3d5efac = L.circle(
+                [30.40444, 31.23583],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.04, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10400.250026634863, "stroke": true, "weight": 1}
+            ).addTo(feature_group_041f6acd466eac827dbd1258f3ee7b98);
+        
+    
+            var circle_e27b353cb78423023e587f9a988ce9b4 = L.circle(
+                [30.40444, 31.41583],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.04, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10400.250026634863, "stroke": true, "weight": 1}
+            ).addTo(feature_group_041f6acd466eac827dbd1258f3ee7b98);
+        
+    
+            var circle_908ce25095e5d925a2a574f5dc935bae = L.circle(
+                [30.40444, 31.59583],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.04, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10400.250026634863, "stroke": true, "weight": 1}
+            ).addTo(feature_group_041f6acd466eac827dbd1258f3ee7b98);
+        
+    
+            var circle_fe8973d22f8523a08a0b71c6e312ff0c = L.circle(
+                [29.723947752296127, 30.79837265893738],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.04, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10400.250026634863, "stroke": true, "weight": 1}
+            ).addTo(feature_group_041f6acd466eac827dbd1258f3ee7b98);
+        
+    
+            var circle_4872a157c12e80f3432c9e12315a5246 = L.circle(
+                [29.930692724613618, 31.257207653845875],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.04, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10400.250026634863, "stroke": true, "weight": 1}
+            ).addTo(feature_group_041f6acd466eac827dbd1258f3ee7b98);
+        
+    
+            var circle_a60b98b48e1c65f7e7ed7af77e5f6f49 = L.circle(
+                [29.720231569858562, 31.21591954662137],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.04, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10400.250026634863, "stroke": true, "weight": 1}
+            ).addTo(feature_group_041f6acd466eac827dbd1258f3ee7b98);
+        
+    
+            var circle_9109bd54bb5db7df6c25ca43ee53f1c8 = L.circle(
+                [29.9696404317354, 30.995142946475987],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.04, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10400.250026634863, "stroke": true, "weight": 1}
+            ).addTo(feature_group_041f6acd466eac827dbd1258f3ee7b98);
+        
+    
+            var feature_group_def7d63957fac1360c0750ddfd214450 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_82e5344936c9a04a395bea9d007fccaf = L.marker(
+                [29.9792, 31.1342],
+                {
+}
+            ).addTo(feature_group_def7d63957fac1360c0750ddfd214450);
+        
+    
+            var icon_f3b7be3b21906284eb62b000390efd74 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_82e5344936c9a04a395bea9d007fccaf.bindTooltip(
+                `<div>
+                     Giza Pyramids
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_82e5344936c9a04a395bea9d007fccaf.setIcon(icon_f3b7be3b21906284eb62b000390efd74);
+            
+    
+            var marker_3903b93dce9c2738cb0dbbc39736000f = L.marker(
+                [30.0478, 31.2336],
+                {
+}
+            ).addTo(feature_group_def7d63957fac1360c0750ddfd214450);
+        
+    
+            var icon_4cd94ea8be3b60672946401c19c9b2c3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_3903b93dce9c2738cb0dbbc39736000f.bindTooltip(
+                `<div>
+                     Egyptian Museum
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3903b93dce9c2738cb0dbbc39736000f.setIcon(icon_4cd94ea8be3b60672946401c19c9b2c3);
+            
+    
+            var marker_bd958414879da2caed002ccb4333a136 = L.marker(
+                [30.0458, 31.2242],
+                {
+}
+            ).addTo(feature_group_def7d63957fac1360c0750ddfd214450);
+        
+    
+            var icon_e8403cefe23753fa3b80592bc7ca22f3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_bd958414879da2caed002ccb4333a136.bindTooltip(
+                `<div>
+                     Cairo Tower
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bd958414879da2caed002ccb4333a136.setIcon(icon_e8403cefe23753fa3b80592bc7ca22f3);
+            
+    
+            var marker_470fc5b0c627ea5346a48f85b2575e9f = L.marker(
+                [30.0456, 31.2628],
+                {
+}
+            ).addTo(feature_group_def7d63957fac1360c0750ddfd214450);
+        
+    
+            var icon_a4bd61c839d937eae03824859ecf581f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_470fc5b0c627ea5346a48f85b2575e9f.bindTooltip(
+                `<div>
+                     Al-Azhar Mosque
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_470fc5b0c627ea5346a48f85b2575e9f.setIcon(icon_a4bd61c839d937eae03824859ecf581f);
+            
+    
+            var layer_control_316d767f867ffb8898844103ebfdbc44_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_537b6db4694c88de07df054e396b7c75,
+                },
+                overlays :  {
+                    "Districts" : feature_group_262a50036a3621e312603de674f70fb4,
+                    "Neighborhoods" : feature_group_f85d21fecf9f81796c20a259df7f2ddf,
+                    "Stations" : feature_group_805431db4fee13dfc214e1742274d7da,
+                    "Assignment lines" : feature_group_2fa72b0785c66c2895cabcd9af34df84,
+                    "Covering radius" : feature_group_041f6acd466eac827dbd1258f3ee7b98,
+                    "Landmarks" : feature_group_def7d63957fac1360c0750ddfd214450,
+                },
+            };
+            let layer_control_316d767f867ffb8898844103ebfdbc44 = L.control.layers(
+                layer_control_316d767f867ffb8898844103ebfdbc44_layers.base_layers,
+                layer_control_316d767f867ffb8898844103ebfdbc44_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_59f77cfde77acbec99c1b529a10a3443);
+
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_59f77cfde77acbec99c1b529a10a3443);
+        
+</script>
+</html>

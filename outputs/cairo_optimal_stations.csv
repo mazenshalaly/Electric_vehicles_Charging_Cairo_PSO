@@ -1,0 +1,16 @@
+Station_ID,Latitude,Longitude,Index_in_Candidates,Nearest_District,Neighborhoods_Served
+1,30.0667,31.2667,8,Abbassia,21
+2,30.0167,31.45,13,New Cairo,5
+3,29.68444,31.59583,34,New Cairo,1
+4,29.95444,31.59583,64,New Cairo,2
+5,30.04444,31.14583,69,Mohandessin,8
+6,30.13444,31.41583,82,Heliopolis,4
+7,30.31444,30.96583,97,Shubra,2
+8,30.31444,31.41583,102,Heliopolis,1
+9,30.40444,31.23583,110,Heliopolis,1
+10,30.40444,31.41583,112,Heliopolis,1
+11,30.40444,31.59583,114,Heliopolis,1
+12,29.72395,30.79837,115,6th October City,2
+13,29.93069,31.25721,157,Maadi,6
+14,29.72023,31.21592,168,Maadi,1
+15,29.96964,30.99514,169,6th October City,4

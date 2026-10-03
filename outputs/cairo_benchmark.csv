@@ -1,0 +1,5 @@
+Method,Mean max dist (km),Std (km),Best (km)
+PSO,13.05,1.32,11.29
+PSO + farthest-first seeding,10.34,0.1,10.16
+Random search,15.07,0.62,13.86
+Farthest-first heuristic (deterministic),10.4,0.0,10.4
